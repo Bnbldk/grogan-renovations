@@ -18,6 +18,10 @@
       scroll-behavior: smooth;
       padding-top: 70px; /* Space for fixed navbar */
     }
+    /* Navbar */
+    .navbar {
+      background-color: #000 !important;
+    }
     .navbar-brand {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 2rem;
@@ -76,6 +80,10 @@
     .section {
       padding: 60px 0;
     }
+    /* Fix anchor offset due to fixed navbar */
+    #hero, #about, #services, #contact {
+      scroll-margin-top: 100px;
+    }
     /* Service Cards */
     .service-card {
       margin-bottom: 30px;
@@ -88,7 +96,7 @@
     /* About Section Enhancements */
     #about img {
       border-radius: 10px;
-      max-width: 200px; /* Updated max-width to 300px */
+      max-width: 200px;
       width: auto;
       height: auto;
       margin: auto;
@@ -98,6 +106,7 @@
     footer {
       background-color: #000;
       padding: 20px 0;
+      color: #ffc107;
     }
     footer a {
       color: #ffc107;
@@ -111,7 +120,7 @@
 <body>
 <!-- Header / Navbar -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="#">
         <i class="bi bi-building"></i> Grogan Builders & Renovations
@@ -321,18 +330,19 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <form>
+        <!-- Contact form using Formspree -->
+        <form action="https://formspree.io/f/mldjwawp" method="POST">
           <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Your Name">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            <input type="email" class="form-control" id="email" name="_replyto" placeholder="name@example.com" required>
           </div>
           <div class="mb-3">
             <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Your message..."></textarea>
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
           </div>
           <div class="text-center">
             <button type="submit" class="btn btn-explore">Send Message</button>
@@ -344,9 +354,10 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-light">
+<footer>
   <div class="container text-center">
     <p>&copy; 2025 Grogan Builders & Renovations. All rights reserved.</p>
+    <p>
       <a href="#hero">Home</a> |
       <a href="#about">About</a> |
       <a href="#services">Services</a> |
