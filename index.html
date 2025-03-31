@@ -1,54 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Grogan Builders & Renovations</title>
   <!-- Google Font for Builder Style -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+  />
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+  />
   <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
   <!-- Custom CSS -->
   <style>
     /* Global Styles */
     body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       scroll-behavior: smooth;
       padding-top: 70px; /* Space for fixed navbar */
     }
+
     /* Navbar */
     .navbar {
       background-color: #000 !important;
     }
     .navbar-brand {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: "Bebas Neue", sans-serif;
       font-size: 2rem;
       letter-spacing: 1px;
+      white-space: nowrap;
     }
     .navbar-brand i {
       font-size: 2.5rem;
       color: #ffc107;
       margin-right: 0.5rem;
     }
+    @media (max-width: 576px) {
+      .navbar-brand {
+        font-size: 1.5rem;
+      }
+    }
+    /* Center the dropdown collapse content */
+    .navbar-collapse {
+      justify-content: center;
+    }
+    /* Optionally, center the toggler on mobile */
+    @media (max-width: 992px) {
+      .navbar-toggler {
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
     /* Hero Section */
     .hero {
-      background: url('images/background.jpg') no-repeat center center;
+      background: url("images/background.jpg") no-repeat center center;
       background-size: cover;
       color: #fff;
       padding: 150px 0;
       text-align: center;
       position: relative;
     }
-    /* Optional overlay for better text visibility */
     .hero::before {
       content: "";
       position: absolute;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
     .hero .container {
@@ -62,6 +90,7 @@
     .hero p.lead {
       font-size: 1.25rem;
     }
+
     /* Explore Button */
     .btn-explore {
       background-color: #ffc107;
@@ -76,14 +105,19 @@
       background-color: #e0a800;
       color: #000;
     }
+
     /* Section Padding */
     .section {
       padding: 60px 0;
     }
     /* Fix anchor offset due to fixed navbar */
-    #hero, #about, #services, #contact {
+    #hero,
+    #about,
+    #services,
+    #contact {
       scroll-margin-top: 100px;
     }
+
     /* Service Cards */
     .service-card {
       margin-bottom: 30px;
@@ -93,6 +127,7 @@
       margin-right: 8px;
       color: #ffc107;
     }
+
     /* About Section Enhancements */
     #about img {
       border-radius: 10px;
@@ -102,6 +137,7 @@
       margin: auto;
       display: block;
     }
+
     /* Footer */
     footer {
       background-color: #000;
@@ -125,12 +161,18 @@
       <a class="navbar-brand" href="#">
         <i class="bi bi-building"></i> Grogan Builders & Renovations
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav"
-              aria-expanded="false" aria-label="Toggle navigation">
+      <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -154,15 +196,15 @@
 <!-- About Section -->
 <section id="about" class="section">
   <div class="container">
-    <div class="row align-items-center">
-      <!-- Personal image -->
+    <div class="row align-items-center g-4">
       <div class="col-md-6 text-center">
         <img src="images/gerard.jpeg" alt="Gerard Grogan">
       </div>
-      <!-- About Text -->
-      <div class="col-md-6">
+      <div class="col-md-6 text-center text-md-start">
         <h2>About Grogan Builders & Renovations</h2>
-        <p>At Grogan Builders & Renovations, we bring your dream home to life. Our expertise spans all aspects of renovations—from design and planning to final touches. With quality workmanship and innovative design, we ensure every project reflects your vision.</p>
+        <p>
+          At Grogan Builders & Renovations, we bring your dream home to life. Our expertise spans all aspects of renovations—from design and planning to final touches. With quality workmanship and innovative design, we ensure every project reflects your vision.
+        </p>
       </div>
     </div>
   </div>
@@ -176,7 +218,6 @@
       <p class="lead">Which aspect of your home are you looking to renovate?</p>
     </div>
     <div class="row">
-      <!-- Service Cards -->
       <div class="col-md-4 service-card">
         <div class="card h-100">
           <div class="card-body">
@@ -330,7 +371,6 @@
     </div>
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <!-- Contact form using Formspree -->
         <form action="https://formspree.io/f/mldjwawp" method="POST">
           <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -367,6 +407,8 @@
 </footer>
 
 <!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+></script>
 </body>
 </html>
