@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grogan Builders & Renovations</title>
+  <title>Concept Green</title>
   <!-- Google Font for Builder Style -->
   <link
           href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
@@ -25,34 +25,43 @@
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       scroll-behavior: smooth;
-      padding-top: 70px; /* Space for fixed navbar */
+      padding-top: 70px;
+      background-color: #f4fdf7;
+      color: #2e4d3a;
     }
 
     /* Navbar */
     .navbar {
-      background-color: #000 !important;
+      background-color: #3a855b !important;
     }
     .navbar-brand {
       font-family: "Bebas Neue", sans-serif;
       font-size: 2rem;
       letter-spacing: 1px;
       white-space: nowrap;
+      color: #fff !important;
     }
     .navbar-brand i {
       font-size: 2.5rem;
-      color: #ffc107;
+      color: #c5f1d3;
       margin-right: 0.5rem;
     }
+    .nav-link {
+      color: #e0ffe6 !important;
+    }
+    .nav-link:hover {
+      color: #ffffff !important;
+    }
+
     @media (max-width: 576px) {
       .navbar-brand {
         font-size: 1.5rem;
       }
     }
-    /* Center the dropdown collapse content */
+
     .navbar-collapse {
       justify-content: center;
     }
-    /* Optionally, center the toggler on mobile */
     @media (max-width: 992px) {
       .navbar-toggler {
         margin: 0 auto;
@@ -76,7 +85,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(42, 111, 73, 0.3);
       z-index: 1;
     }
     .hero .container {
@@ -93,28 +102,26 @@
 
     /* Explore Button */
     .btn-explore {
-      background-color: #ffc107;
+      background-color: #67c88a;
       border: none;
-      color: #000;
+      color: #fff;
       font-weight: bold;
       padding: 12px 24px;
       border-radius: 5px;
       transition: background-color 0.3s;
     }
     .btn-explore:hover {
-      background-color: #e0a800;
-      color: #000;
+      background-color: #54af74;
+      color: #fff;
     }
 
     /* Section Padding */
     .section {
       padding: 60px 0;
     }
-    /* Fix anchor offset due to fixed navbar */
-    #hero,
-    #about,
-    #services,
-    #contact {
+
+    /* Anchor Scroll Offset */
+    #hero, #about, #services, #contact {
       scroll-margin-top: 100px;
     }
 
@@ -122,10 +129,15 @@
     .service-card {
       margin-bottom: 30px;
     }
+    .service-card .card {
+      background-color: #e6f5ec;
+      border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
     .service-card .card-title i {
       font-size: 1.5rem;
       margin-right: 8px;
-      color: #ffc107;
+      color: #3a855b;
     }
 
     /* About Section Enhancements */
@@ -136,16 +148,26 @@
       height: auto;
       margin: auto;
       display: block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Contact Form */
+    .form-control {
+      border-color: #b2e1c9;
+    }
+    .form-control:focus {
+      border-color: #67c88a;
+      box-shadow: 0 0 0 0.2rem rgba(103, 200, 138, 0.25);
     }
 
     /* Footer */
     footer {
-      background-color: #000;
+      background-color: #3a855b;
       padding: 20px 0;
-      color: #ffc107;
+      color: #e0ffe6;
     }
     footer a {
-      color: #ffc107;
+      color: #ffffff;
       text-decoration: none;
     }
     footer a:hover {
@@ -159,7 +181,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <i class="bi bi-building"></i> Grogan Builders & Renovations
+        <i class="bi bi-building"></i> Concept Green
       </a>
       <button
               class="navbar-toggler"
@@ -188,7 +210,7 @@
 <section id="hero" class="hero">
   <div class="container">
     <h1>Start Your Home Renovations Project</h1>
-    <p class="lead">Transform your space with expert craftsmanship by Grogan Builders & Renovations.</p>
+    <p class="lead">Transform your space with expert craftsmanship by Concept Green Full Home Renovation.</p>
     <a href="#services" class="btn btn-explore btn-lg">Explore Services</a>
   </div>
 </section>
@@ -201,9 +223,9 @@
         <img src="images/gerard.jpeg" alt="Gerard Grogan">
       </div>
       <div class="col-md-6 text-center text-md-start">
-        <h2>About Grogan Builders & Renovations</h2>
+        <h2>About Concept Green Full Home Renovation</h2>
         <p>
-          At Grogan Builders & Renovations, we bring your dream home to life. Our expertise spans all aspects of renovations—from design and planning to final touches. With quality workmanship and innovative design, we ensure every project reflects your vision.
+          At Concept Green Full Home Renovation, we bring your dream home to life. Our expertise spans all aspects of renovations—from design and planning to final touches. With quality workmanship and innovative design, we ensure every project reflects your vision.
         </p>
       </div>
     </div>
@@ -396,7 +418,7 @@
 <!-- Footer -->
 <footer>
   <div class="container text-center">
-    <p>&copy; 2025 Grogan Builders & Renovations. All rights reserved.</p>
+    <p>&copy; 2025 Concept Green Full Home Renovation. All rights reserved.</p>
     <p>
       <a href="#hero">Home</a> |
       <a href="#about">About</a> |
